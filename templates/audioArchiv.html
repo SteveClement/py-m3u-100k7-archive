@@ -1,18 +1,80 @@
-<!-- all your CSS and JS code, including the stuff -->
-<!-- to handle the datepicker formatting -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Radio 100,7 Archive</title>
+<link href="https://brick.a.ssl.fastly.net/EB+Garamond:400:f/Libre+Baskerville:400,400i:f" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            padding: 100px 300px;
+            margin: 0;
+            -webkit-font-feature-settings: "kern", "liga";
+            -moz-font-feature-settings: "kern", "liga";
+            font-feature-settings: "kern", "liga";
+            text-rendering: optimizeLegibility;
+            border-top: 5px solid #FF8A00;
+        }
+        em {
+            font-family: "Libre Baskerville";
+        }
+        a {
+            color: #FF8A00;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 1px dotted #FF8A00;
+        }
+        a:hover {
+            border-bottom-style: solid;
+        }
+        p {
+            font-family: "EB Garamond";
+            font-size: 24px;
+            line-height: 32px;
+        }
+        h1 {
+            font-family: 'Libre Baskerville';
+            color: #222;
+            font-weight: 400;
+            font-size: 2em;
+            position: relative;
+        }
+        h1:before {
+            content: '>';
+            position: absolute;
+            top: 0;
+            right: 105%;
+            color: #AAA;
+            font-style: normal;
+            font-size: 1em
+        }
+    </style>
+</head>
+<body>
+<!-- # 100k7 Orange: FF8A00
+# 100k7 Gray: 50504f -->
 
-<h3>Please select the date you want to listen to</h3>
+<h1>Please select the date you want to listen to</h1>
 <form name="Item_1" action="#" method='POST'>
-    <select name="Item_1">
-	{% for o in show %}
-        <option value="{{ loop.index }}">{{ o }}</option> {% endfor %}
-    </select>
-    <button type="submit">Compare!</button>
-</form>
-
 <form action="#" method="post">
+    <select name="Item_1">
+    {% for show in shows %} <option value="{{ loop.index }}">{{ show }}</option> {% endfor %}
+    </select>
     {{ form.dt(class='datepicker') }}
     {{ form.hidden_tag() }}
     <input type="submit"/>
 </form>
 
+<!--- https://ghbtns.com/ -->
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=SteveClement&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="no" width="220px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=SteveClement&amp;repo=py-m3u-100k7-archive&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="no" width="158px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=SteveClement&amp;repo=py-m3u-100k7-archive&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="no" width="160px" height="30px"></iframe>
+</p>
+
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+</p>
+</body>
+</html>
