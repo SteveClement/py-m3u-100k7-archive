@@ -2,8 +2,17 @@
 <!-- to handle the datepicker formatting -->
 
 <h3>Please select the date you want to listen to</h3>
+<form name="Item_1" action="#" method='POST'>
+    <select name="Item_1">
+	{% for o in show %}
+        <option value="{{ loop.index }}">{{ o }}</option> {% endfor %}
+    </select>
+    <button type="submit">Compare!</button>
+</form>
+
 <form action="#" method="post">
     {{ form.dt(class='datepicker') }}
     {{ form.hidden_tag() }}
     <input type="submit"/>
 </form>
+
