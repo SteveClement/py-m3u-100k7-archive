@@ -11,7 +11,6 @@ shows = [ "All", "Mënsch an Ëmwelt","Noriichten","Klassik oder Klassësch","Sc
 class Form(Form):
     dt = DateField('DatePicker', format='%Y-%m-%d')
 
-
 @app.route('/', methods=['POST','GET'])
 def audioArchiv():
     form = Form()
