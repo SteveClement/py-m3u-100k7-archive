@@ -1,3 +1,5 @@
+:warning: This repository is obsolete
+
 # Flask web interface to be used with the appropriate gist
 
 ## Installation
